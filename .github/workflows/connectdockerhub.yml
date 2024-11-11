@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Docker CI
 
 # Controls when the workflow will run
 on:
@@ -24,8 +24,8 @@ jobs:
 
       - name: Log in to Docker Hub
         env:
-          DOCKER_USERNAME: ${{ secrets.DOCKER_Viji_Username }}
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_Viji_Password }}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_VIJI_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_VIJI_PASSWORD }}
         run: |
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
